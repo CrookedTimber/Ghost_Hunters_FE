@@ -4,9 +4,9 @@ html {
     font-size: calc(60% + 0.8vmin);
 }
 
-* {
+/* * {
     font-size: 1rem;
-}
+} */
 
 body {
     background-color: #060708;
@@ -29,7 +29,6 @@ body {
     line-height: 80%;
 }
 
-
 .button-hover {
     color: #bcbdbf;
     border: none;
@@ -38,7 +37,6 @@ body {
 .button-hover:hover {
     color: #fff;
 }
-
 
 .header-image {
     width: 100%;
@@ -51,8 +49,7 @@ body {
 
 .offcanvas-button {
 
-    padding: 5px 5px 10px 5px;
-
+   
     background-color: #363a3e;
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
@@ -65,76 +62,47 @@ body {
     border-color: #060708;
 
     font-size: .8rem;
-
     color: #fff;
     font-weight: bold;
     position: sticky;
-    height: 50px;
-    width: 170px;
-    top: 45px;
+    height: 7vh;
+    width: 14vw;
+    top: 44px;
     z-index: 10;
 }
 
 .offcanvas-button:hover {
     border-top: none;
     border-color: #fff;
-
 }
 
-.offcanvas {
-    width: 100%;
-    color: #e9e9ea;
-    background-color: #060708;
-    font-size: 2rem;
-}
-
-/* .offcanvas-body */
-
-
-
-.post,
-.accordion {
-    margin: 0 auto;
-    max-width: 50rem;
-
-    text-align: justify;
-}
 
 .post {
-    padding: 4vh 0;
-    margin-top: 0;
-    border-top-left-radius: 15px;
-    border-top-right-radius: 15px;
-    border-bottom-left-radius: 0;
-    border-bottom-right-radius: 0;
+    margin: 45px auto;
+    max-width: 50rem;
+    border-radius: 15px;
+    text-align: justify;
+    color: #060708;
+    padding: 2% 4%;
 }
 
-.accordion {
-    margin-bottom: 5%;
-}
-
-.post * {
-    color: black;
-    padding: 0 4vw 0;
-}
 
 .post h1 {
     font-family: 'Goudy Bookletter 1911', serif;
-
+    font-size: 1.4rem;
     font-weight: bold;
     text-align: start;
-    font-size: 1.4rem;
 }
 
 .post h2 {
     font-family: 'Goudy Bookletter 1911', serif;
-    font-weight: bold;
     font-size: 1.2rem;
+    font-weight: bold;
 }
 
 .post h3 {
-    margin-left: auto;
     font-size: .9rem;
+    margin-left: auto;
 }
 
 
@@ -144,43 +112,76 @@ body {
 
 }
 
-.comments {
-    border-top-left-radius: 0;
-    border-top-right-radius: 0;
-    border-bottom-left-radius: 40px;
-    border-bottom-right-radius: 40px;
+.post .emoji-btn {
+    width: 45px;
+    margin-right: 20px;
+    padding: 0%;
+
 }
+
+.post .btn-dark {
+
+
+    margin: 20px auto;
+    width: 100%;
+    border-radius: 20px;
+    font-family: 'Goudy Bookletter 1911', serif;
+    font-weight: bold;
+    letter-spacing: 0.14rem;
+}
+
+
+#offcanvas-newpost {
+    background-color: #060708;
+    color: #e9e9ea;
+    font-size: 2rem;
+    width: 100%;
+}
+
+
+#offcanvasComments {
+    width: 480px;
+  }
+
+  #offcanvasComments h1 {
+    font-size: 1.7rem;
+  }
+
+  #offcanvasComments h2 {
+    font-size: 1.5rem;
+  }
+
+  #offcanvasComments p {
+    font-size: 1.2rem;
+  }
+  
+@media only screen and (max-width: 768px) {
+    /* For mobile phones: */
+    #offcanvasComments {
+        border-left-width: 0;
+      width: 100%;
+    }
+  }
+
+
 
 
 .form-body {
-
     margin: auto;
     color: #060708;
-    width: 100%;
-
-
+    max-width: 45rem;
     font-size: .8rem;
-
     border-radius: 25px;
-
 }
 
-
-.form-body .form-floating:focus-within {
-    z-index: 2;
-}
 
 #footer {
     background-color: #131619;
     color: #fff;
     text-align: center;
-    height: 85px;
-  
-    padding: 15px 0 20px;
+    height: 90px;
     position: static;
-    bottom: 0;
-}
-
-#footer * {
     font-size: 1.5rem;
+    line-height: 100%;
+    bottom: 0;
 }
