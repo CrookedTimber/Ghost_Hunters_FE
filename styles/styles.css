@@ -1,0 +1,186 @@
+@import url('https://fonts.googleapis.com/css2?family=Goudy+Bookletter+1911&family=Raleway&display=swap');
+
+html {
+    font-size: calc(60% + 0.8vmin);
+}
+
+* {
+    font-size: 1rem;
+}
+
+body {
+    background-color: #060708;
+    font-family: 'Raleway', sans-serif;
+}
+
+.gaudy-font {
+    font-family: 'Goudy Bookletter 1911', serif;
+    letter-spacing: 0.14rem;
+}
+
+.navbar-brand {
+    font-size: 1.7rem;
+    line-height: 80%;
+}
+
+.nav-link {
+    margin-left: .25vw;
+    font-size: 1.3rem;
+    line-height: 80%;
+}
+
+
+.button-hover {
+    color: #bcbdbf;
+    border: none;
+}
+
+.button-hover:hover {
+    color: #fff;
+}
+
+
+.header-image {
+    width: 100%;
+    border: none;
+}
+
+.image-credit {
+    padding: 0 1.5vw;
+}
+
+.offcanvas-button {
+
+    padding: 5px 5px 10px 5px;
+
+    background-color: #363a3e;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border: 0 solid solid;
+    border-left: solid;
+    border-right: solid;
+    border-bottom: solid;
+    border-top: none;
+    border-width: 0 5px 5px;
+    border-color: #060708;
+
+    font-size: .8rem;
+
+    color: #fff;
+    font-weight: bold;
+    position: sticky;
+    height: 50px;
+    width: 170px;
+    top: 45px;
+    z-index: 10;
+}
+
+.offcanvas-button:hover {
+    border-top: none;
+    border-color: #fff;
+
+}
+
+.offcanvas {
+    width: 100%;
+    color: #e9e9ea;
+    background-color: #060708;
+    font-size: 2rem;
+}
+
+/* .offcanvas-body */
+
+
+
+.post,
+.accordion {
+    margin: 0 auto;
+    max-width: 50rem;
+
+    text-align: justify;
+}
+
+.post {
+    padding: 4vh 0;
+    margin-top: 0;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.accordion {
+    margin-bottom: 5%;
+}
+
+.post * {
+    color: black;
+    padding: 0 4vw 0;
+}
+
+.post h1 {
+    font-family: 'Goudy Bookletter 1911', serif;
+
+    font-weight: bold;
+    text-align: start;
+    font-size: 1.4rem;
+}
+
+.post h2 {
+    font-family: 'Goudy Bookletter 1911', serif;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.post h3 {
+    margin-left: auto;
+    font-size: .9rem;
+}
+
+
+.post p {
+    line-height: 160%;
+    font-size: 1rem;
+
+}
+
+.comments {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 40px;
+    border-bottom-right-radius: 40px;
+}
+
+
+.form-body {
+
+    margin: auto;
+    color: #060708;
+    width: 100%;
+
+
+    font-size: .8rem;
+
+    border-radius: 25px;
+
+}
+
+
+.form-body .form-floating:focus-within {
+    z-index: 2;
+}
+
+#footer {
+    background-color: #131619;
+    color: #fff;
+    text-align: center;
+    height: 85px;
+  
+    padding: 15px 0 20px;
+    position: static;
+    bottom: 0;
+}
+
+#footer * {
+    font-size: 1.5rem;
+}
