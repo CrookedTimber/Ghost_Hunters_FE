@@ -24,14 +24,14 @@ body {
 }
 
 .nav-link {
-    margin-left: .25vw;
     font-size: 1.3rem;
     line-height: 80%;
+    margin-left: .25vw;
 }
 
 .button-hover {
-    color: #bcbdbf;
     border: none;
+    color: #bcbdbf;
 }
 
 .button-hover:hover {
@@ -39,8 +39,8 @@ body {
 }
 
 .header-image {
-    width: 100%;
     border: none;
+    width: 100%;
 }
 
 .image-credit {
@@ -48,42 +48,35 @@ body {
 }
 
 .offcanvas-button {
-
-   
+ 
     background-color: #363a3e;
-    border-bottom-left-radius: 20px;
-    border-bottom-right-radius: 20px;
-    border: 0 solid solid;
-    border-left: solid;
-    border-right: solid;
-    border-bottom: solid;
-    border-top: none;
-    border-width: 0 5px 5px;
-    border-color: #060708;
-
-    font-size: .8rem;
+    border-radius: 100px;
+    border: none;
     color: #fff;
+    font-size: .8rem;
     font-weight: bold;
+    height: 5.5rem;
+    margin-left: 1.5vw;
+    margin-top: .5vw;
     position: sticky;
-    height: 7vh;
-    width: 14vw;
-    top: 44px;
+    top: 60px;
+    width: 6rem;
     z-index: 10;
 }
 
 .offcanvas-button:hover {
-    border-top: none;
+    border: solid;
     border-color: #fff;
 }
 
 
 .post {
-    margin: 45px auto;
-    max-width: 50rem;
     border-radius: 15px;
-    text-align: justify;
     color: #060708;
+    margin: 10px auto 25px;
+    max-width: 50rem;
     padding: 2% 4%;
+    text-align: justify;
 }
 
 
@@ -107,27 +100,33 @@ body {
 
 
 .post p {
-    line-height: 160%;
     font-size: 1rem;
+    line-height: 160%;
 
 }
 
 .post .emoji-btn {
-    width: 45px;
+    border-radius: 45px;
     margin-right: 20px;
     padding: 0%;
-
+    width: 45px;
 }
 
 .post .btn-dark {
 
-
-    margin: 20px auto;
-    width: 100%;
     border-radius: 20px;
     font-family: 'Goudy Bookletter 1911', serif;
     font-weight: bold;
     letter-spacing: 0.14rem;
+    margin: 20px auto;
+    width: 100%;
+}
+
+.post .btn-dark:hover {
+    text-decoration:wavy;
+
+    border-color: #fff;
+
 }
 
 
@@ -141,47 +140,48 @@ body {
 
 #offcanvasComments {
     width: 480px;
-  }
+}
 
-  #offcanvasComments h1 {
+#offcanvasComments h1 {
     font-size: 1.7rem;
-  }
+}
 
-  #offcanvasComments h2 {
+#offcanvasComments h2 {
     font-size: 1.5rem;
-  }
+}
 
-  #offcanvasComments p {
+#offcanvasComments p {
     font-size: 1.2rem;
-  }
-  
+}
+
 @media only screen and (max-width: 768px) {
+
     /* For mobile phones: */
     #offcanvasComments {
         border-left-width: 0;
-      width: 100%;
+        width: 100%;
     }
-  }
+}
 
 
 
 
 .form-body {
-    margin: auto;
-    color: #060708;
-    max-width: 45rem;
-    font-size: .8rem;
     border-radius: 25px;
+    color: #060708;
+    font-size: .8rem;
+    margin: auto;
+    max-width: 45rem;
 }
 
 
 #footer {
     background-color: #131619;
-    color: #fff;
-    text-align: center;
-    height: 90px;
-    position: static;
-    font-size: 1.5rem;
-    line-height: 100%;
     bottom: 0;
+    color: #fff;
+    font-size: 1.5rem;
+    height: 90px;
+    line-height: 60%;
+    position: static;
+    text-align: center;
 }
