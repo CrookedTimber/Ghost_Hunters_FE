@@ -4,12 +4,10 @@
 // add new story section
 
 
-const submitBtn = document.getElementById("submitbutton");
+const submitBtn = document.getElementById("submit-post-button");
 let storyInput = document.getElementById("new-post-text");
 let titleInput = document.getElementById("new-post-title")
-let dateInput = document.getElementById("post-date")
 let closeBtn = document.getElementById("close-new-post")
-
 
 
 function createNewPost(e) {
@@ -18,7 +16,7 @@ function createNewPost(e) {
     div.setAttribute('class', 'card post');
     div.innerHTML =
                     `
-                    <h3>${dateInput.value}</h3>
+                    <h3>${Date()}</h3>
 
                     <h1>${titleInput.value}</h1>
 
@@ -43,7 +41,7 @@ function createNewPost(e) {
                     </button>
 
                     <button type="button" class="btn btn-secondary emoji-btn  position-relative">
-                        👹
+                       🦕
                         <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
                         0
                         </span>
