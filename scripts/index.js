@@ -70,3 +70,24 @@ function createNewPost(e) {
 
 
 submitBtn.addEventListener("click", createNewPost)
+
+
+
+
+
+let comment = document.getElementById("new-comment-text");
+let submitCommentBtn = document.getElementById("postComment");
+function submitComment(e) {
+    e.preventDefault();
+    const div = document.createElement("div");
+    div.setAttribute('class', 'comment');
+    div.innerHTML =
+                    `
+                    <h4>Username</h4>
+                    <p>${comment.value}</p>
+                    `
+            const containerComment = document.getElementById('comments-list')
+            containerComment.appendChild(div)
+        comment.value="";
+}
+submitCommentBtn.addEventListener("click", submitComment)
