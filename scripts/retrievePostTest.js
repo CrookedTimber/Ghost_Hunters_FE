@@ -1,5 +1,3 @@
-
-
 getAllPosts()
 
 async function getAllPosts() {
@@ -10,7 +8,7 @@ async function getAllPosts() {
     const data = await response.json();
 
     data.forEach(element => {
-       
+
         const cardPost = document.createElement("div");
         cardPost.setAttribute('class', 'card post');
         cardPost.innerHTML =
@@ -61,7 +59,7 @@ async function getAllPosts() {
 
     });
 
-    
+
     let emojiBtns = document.querySelectorAll('.emoji-btn');
 
 
@@ -70,10 +68,10 @@ async function getAllPosts() {
         btn.addEventListener('click', event => {
 
             console.log(event.target.id.slice(5))
-           
-    
+
+
         })
-    
+
     })
 
 
@@ -84,15 +82,73 @@ async function getAllPosts() {
 
         btn.addEventListener('click', event => {
 
-            console.log(event.target.id.slice(11))
-
             let commentGuide = document.querySelector('.commentGuide')
             commentGuide.id = `forPost${event.target.id.slice(11)}`
-           
-    
+            getComments(commentGuide.id.slice(7))
+
         })
-    
+
     })
+
+
+
+}
+
+
+async function getComments(commentGuide) {
+
+    let commentList = document.querySelector('#comments-list')
+
+    commentList.innerHTML = ''
+
+
+
+    const response = await fetch('http://localhost:5000/posts');
+    if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+    }
+    const data = await response.json();
+
+    console.log(commentGuide)
+
+    let commentArray = data[commentGuide - 1].Comments
+
+
+    commentArray.forEach(element => {
+
+        const Commentdiv = document.createElement("div");
+        Commentdiv.setAttribute('class', 'comment');
+        Commentdiv.innerHTML =
+            `
+                     <h3>${element.Date}</h3>
+                    <h2>${element.Author}</h2>
+                    <p>${element.Text}</p>
+                    `
+
+
+        commentList.appendChild(Commentdiv)
+
+
+
+
+
+
+
+    });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
