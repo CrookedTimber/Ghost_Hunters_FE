@@ -159,16 +159,12 @@ body {
 }
 
 @media only screen and (max-width: 768px) {
-
     /* For mobile phones: */
     #offcanvasComments {
         border-left-width: 0;
         width: 100%;
     }
 }
-
-
-
 
 .form-body {
     border-radius: 25px;
