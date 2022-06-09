@@ -13,12 +13,8 @@
     integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
   </script>
   <link rel="stylesheet" href="./styles/styles.css">
-  <!-- <script defer src="./scripts/index.js"></script> -->
-  <!-- <script defer src="./scripts/serverposttest.js"></script>
-  <script defer src="./scripts/retrievePostTest.js"></script> -->
   <script defer src="./scripts/EdgarCurrentDataPosting.js"></script>
   <script defer src="./scripts/EdgarCurrentRetrieveData.js"></script>
-
 
 </head>
 <body>
@@ -95,7 +91,6 @@
           
           </div>
 
-
           <div class="form-floating">
             <input type="text" class="form-control rounded-0 rounded-top" placeholder="Title" id="new-post-title"
               required>
@@ -103,8 +98,8 @@
           </div>
           <div class="form-floating">
             <input type="text" class="form-control rounded-0 rounded-bottom" placeholder="Your Alias"
-              id="new-post-alias">
-            <label for="new-post-alias">Your Alias (Optional)</label>
+              id="new-post-alias" required>
+            <label for="new-post-alias">Your Nickname (Use the button below to generate a random one!)</label>
             <span class="btn btn-secondary gaudy-font me-auto" id="createUserName">Generate Random Nickname</span>
           </div>
 
@@ -112,6 +107,10 @@
             <textarea class="form-control form-textarea" type="text" placeholder="message" id="new-post-text"
               maxlength="1500" style="height: 250px;" required></textarea>
             <label for="new-post-text">Your Story</label>
+          </div>
+          <div class="form-floating">
+            <input type="text" class="form-control rounded-2" placeholder="Your Alias" id="new-comment-gif">
+            <label for="new-comment-gif">(Optional) Add a keyword to illustrate the story with an image</label>
           </div>
 
         </div>
@@ -253,7 +252,7 @@
                 maxlength="300" style="height: 150px;" required></textarea>
               <label for="new-post-text">Your Comment</label>
             </div>
-
+            
           </div>
 
 

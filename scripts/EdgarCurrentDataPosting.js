@@ -8,6 +8,17 @@ let newCommentForm = document.querySelector('#new-comment-form')
 newPostForm.addEventListener('submit', e => {
     e.preventDefault();
 
+
+    if (e.target['new-comment-gif'].value === ''){
+        console.log('no gif')
+    } else{
+        console.log(`The gif value is equal to "${e.target['new-comment-gif'].value}" `)
+    }
+
+
+
+
+
     const postData = {
 
         Date: Date().slice(4, 33),
@@ -71,7 +82,7 @@ newCommentForm.addEventListener('submit', e => {
 
     };
 
-    fetch('http://localhost:5000/posts/newComment', options)
+    fetch('http://localhost:5000/posts/Comment', options)
         .then(r => r.json())
         .catch(console.warn)
 
