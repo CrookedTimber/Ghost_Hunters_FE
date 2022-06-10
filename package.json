@@ -7,18 +7,22 @@
     "test": "tests"
   },
   "scripts": {
-    "start" : " node ./scripts/index.js",
-    "dev" : "nodemon ./scripts/index.js",
-    "test" : "jest --silent --watchAll",
+    "start": " node ./scripts/index.js",
+    "dev": "nodemon ./scripts/index.js",
+    "test": "jest --silent --watchAll",
     "coverage": "jest --coverage --silent"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.18.1"
+    "cors": "^2.8.5",
+    "express": "^4.18.1",
+    "jest": "^28.1.1",
+    "jest-fetch-mock": "^3.0.3"
   },
   "devDependencies": {
+    "jest-environment-jsdom": "^28.1.1",
     "jester": "^0.2.3",
     "nodemon": "^2.0.16",
     "supertest": "^6.2.3"

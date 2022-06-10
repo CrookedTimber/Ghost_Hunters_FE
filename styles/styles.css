@@ -4,9 +4,6 @@ html {
     font-size: calc(60% + 0.8vmin);
 }
 
-/* * {
-    font-size: 1rem;
-} */
 
 body {
     background-color: #060708;
@@ -47,8 +44,26 @@ body {
     padding: 0 1.5vw;
 }
 
+.license-link {
+
+    margin-top: auto;
+}
+
+.license-image {
+    padding-left: auto;
+    margin-left: auto;
+    width: 50%;
+}
+
+.pexels-license-image {
+    padding-left: auto;
+    margin-left: auto;
+    width: 70%;
+}
+
+
 .offcanvas-button {
- 
+
     background-color: #363a3e;
     border-radius: 100px;
     border: none;
@@ -96,6 +111,7 @@ body {
 .post h3 {
     font-size: .9rem;
     margin-left: auto;
+    margin-top: 3%;
 }
 
 
@@ -105,11 +121,20 @@ body {
 
 }
 
+.post img {
+    max-width: 40%;
+    max-height: 50%;
+    border-radius: 25px;
+    margin: auto;
+    margin-bottom: 3%;
+}
+
 .post .emoji-btn {
     border-radius: 45px;
     margin-right: 20px;
     padding: 0%;
     width: 45px;
+    font-size: 1.2rem;
 }
 
 .post .btn-dark {
@@ -123,12 +148,10 @@ body {
 }
 
 .post .btn-dark:hover {
-    text-decoration:wavy;
 
     border-color: #fff;
-
+    text-decoration: wavy;
 }
-
 
 #offcanvas-newpost {
     background-color: #060708;
@@ -137,23 +160,25 @@ body {
     width: 100%;
 }
 
-
 #offcanvasComments {
     width: 480px;
 }
 
 #offcanvasComments h3 {
+    margin-top: 5px;
     font-size: 1rem;
-    margin-left: 75%;
-    line-height: 30%;
+    text-align: end;
+    line-height: 80%;
 }
 
 #offcanvasComments h2 {
-    font-size: 1.4rem;
+    font-size: 1.3rem;
     line-height: 60%;
+    margin-top: 15px;
 }
 
 #offcanvasComments p {
+    margin-top: 10px;
     font-size: 1.1rem;
     margin-bottom: 25px;
 }
@@ -166,9 +191,6 @@ body {
         width: 100%;
     }
 }
-
-
-
 
 .form-body {
     border-radius: 25px;
@@ -183,9 +205,14 @@ body {
     background-color: #131619;
     bottom: 0;
     color: #fff;
+
     font-size: 1.5rem;
-    height: 90px;
-    line-height: 60%;
+    height: 15vh;
+    line-height: 90%;
     position: static;
     text-align: center;
+}
+
+#genHor {
+    background-color: #060708;
 }
