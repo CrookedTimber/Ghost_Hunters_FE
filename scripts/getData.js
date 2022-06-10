@@ -1,7 +1,7 @@
 // Fetch all data from the Posts database
 
 async function getPostsData() {
-    const response = await fetch('https://paranormal-testimonies.herokuapp.com/posts');
+    const response = await fetch('http://localhost:5000/posts');
     if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`);
     }
@@ -180,7 +180,7 @@ async function getAllComments() {
 
 function getRandomStory(e) {
     e.preventDefault();
-    fetch('https://paranormal-testimonies.herokuapp.com/stories/random')
+    fetch('http://localhost:5000/stories/random')
         .then(response => {
             if (!response.ok) {
                 throw new Error("HTTP error " + response.status);
