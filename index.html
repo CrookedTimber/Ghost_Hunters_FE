@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Ghostly Apparitions</title>
-  <link rel="icon" type="image/x-icon" href="./images/pexels-photo-5688477-modified.png">
+  <link rel="icon" type="image/x-icon" href="./images/ghostFavicon.png">
   <script src="https://kit.fontawesome.com/a2ddcd5304.js" crossorigin="anonymous"></script>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
@@ -13,10 +14,13 @@
     integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
   </script>
   <link rel="stylesheet" href="./styles/styles.css">
-  <script defer src="./scripts/EdgarCurrentDataPosting.js"></script>
-  <script defer src="./scripts/EdgarCurrentRetrieveData.js"></script>
+  <script src="./scripts/postData.js"></script>
+  <script src="./scripts/getData.js"></script>
+  <script defer src="./scripts/index.js"></script>
+
 
 </head>
+
 <body>
 
 
@@ -32,13 +36,13 @@
       <div class="collapse navbar-collapse" id="navbarsExample05">
         <ul class="navbar-nav ms-auto me-3 d-flex align-items-center dropdown-navbar">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Ghostly Apparitions</a>
+            <a class="nav-link active" aria-current="page" href="./index.html">Ghostly Apparitions</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Close Encounters</a>
+            <a class="nav-link" href="./encounters.html">Close Encounters</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Cryptid Sightings</a>
+            <a class="nav-link" href="./cryptids.html">Cryptid Sightings</a>
           </li>
         </ul>
       </div>
@@ -53,7 +57,28 @@
     <div class="card-img-overlay d-inline-flex justify-content-end">
 
 
-      <p class="card-text image-credit mt-auto fs-6">Photo by Erik Mclean</p>
+
+      <div class="row justify-content-end mt-auto">
+
+
+        <div class="col-3 ms-auto">
+          <p class="card-text image-credit mt-auto fs-6">Photo by Erik McLean</p>
+        </div>
+
+
+
+        <div class="col-3 mt-auto ">
+
+          <a href="https://www.pexels.com/license/" class="license-link"> <img src="./images/pexels-logo.png"
+              alt="Pexels License Link" class="pexels-license-image">
+          </a>
+
+        </div>
+
+      </div>
+
+
+
     </div>
   </header>
   <!-- Header Image End -->
@@ -71,8 +96,6 @@
     </div>
 
 
-
-
     <div class="offcanvas-body justify-content-center text-center new-post-body">
 
       <h1 class="offcanvas-title gaudy-font mb-3">Tell Your Story</h1>
@@ -83,12 +106,12 @@
 
           <div class="form-floating">
             <select class="form-control" id="storyType">
-                <option value="Ghost">Ghost Apparition</option>
-                <option value="UFO">Extraterrestrial Encounter</option>
-                <option value="Cryptid">Cryptid Sighting</option>
+              <option value="Ghost">Ghostly Apparition</option>
+              <option value="UFO">Extraterrestrial Encounter</option>
+              <option value="Cryptid">Cryptid Sighting</option>
             </select>
             <label for="storyType">Select the type of story ▼</label>
-          
+
           </div>
 
           <div class="form-floating">
@@ -104,14 +127,16 @@
           </div>
 
           <div class="form-floating mt-3">
-            <textarea class="form-control form-textarea" type="text" placeholder="message" id="new-post-text"
-              maxlength="1500" style="height: 250px;" required></textarea>
-            <label for="new-post-text">Your Story</label>
-          </div>
-          <div class="form-floating">
             <input type="text" class="form-control rounded-2" placeholder="Your Alias" id="new-comment-gif">
             <label for="new-comment-gif">(Optional) Add a keyword to illustrate the story with an image</label>
           </div>
+
+          <div class="form-floating">
+            <textarea class="form-control form-textarea" type="text" placeholder="message" id="new-post-text"
+              maxlength="1500" style="height: 250px;" required></textarea>
+            <label for="new-post-text">Your Story (Maximum 1500 characters)</label>
+          </div>
+
 
         </div>
 
@@ -135,6 +160,30 @@
     data-bs-target="#offcanvas-newpost">
     SHARE YOUR STORY
   </button>
+
+
+  <!-- Random Story generator -->
+
+  <section id="random-story">
+
+    <div class="card d-flex align-items-center" id="genHor">
+
+      <h1 class="text-light gaudy-font"> Need inspiration? </h1>
+
+      <button class="btn btn-secondary gaudy-font" id="storyGen">Click for a micro horror story</button>
+
+      <div class="p-4">
+
+        <h1 class="fs-4 text-light gaudy-font" id="scary"> </h1>
+
+      </div>
+
+    </div>
+
+
+  </section>
+
+  <!-- Random Story Generator End -->
 
 
   <!-- Post Section Start -->
@@ -161,41 +210,14 @@
 
       <p>Now that you’ve read one of Alabama’s ghost stories, don’t miss these scary urban legends from every state.</p>
 
+      <img src="" alt="">
+
 
       <div class="d-flex justify-content-end">
 
 
-        <button type="button" class="btn btn-secondary emoji-btn position-relative">
-          👻
-          <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
-            0
-          </span>
-          <button type="button" class="btn btn-secondary emoji-btn  position-relative">
-            🛸
-            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
-              0
-            </span>
-          </button>
-
-          <button type="button" class="btn btn-secondary emoji-btn  position-relative">
-            🦕
-            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
-              0
-            </span>
-          </button>
-
-
-      </div>
-
-
-      <button class="btn btn-dark" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasComments"
-        aria-controls="offcanvasComments">
-        SHOW COMMENTS
-      </button>
 
     </div>
-
-
 
 
   </section>
@@ -210,7 +232,7 @@
 
 
     <h3 class="d-flex justify-content-end"><i type="button" data-bs-dismiss="offcanvas"
-        class="me-3 mt-3 fa-regular fa-circle-xmark"></i>
+        class="me-3 mt-3 fs-3 fa-regular fa-circle-xmark"></i>
     </h3>
 
 
@@ -223,13 +245,7 @@
 
       <div id="comments-list">
 
-
-
-
-
       </div>
-
-
 
 
       <form id='new-comment-form' action="#" class="m-auto">
@@ -250,9 +266,9 @@
             <div class="form-floating mt-3">
               <textarea class="form-control form-textarea" type="text" placeholder="message" id="new-comment-text"
                 maxlength="300" style="height: 150px;" required></textarea>
-              <label for="new-post-text">Your Comment</label>
+              <label for="new-post-text">Your Comment (Maximum 500 characters)</label>
             </div>
-            
+
           </div>
 
 
@@ -286,14 +302,25 @@
   <!-- Footer -->
   <div id="footer" class="container-fluid gaudy-font mt-5 py-3">
 
-    <p> Copyright © 2022, The Ghost Hunters</p>
+    <p class="section-indicator" id="Ghost"> Copyright © 2022, The Ghost Hunters</p>
 
+    <div class="row justify-content-center">
 
-    <a href="#" target="_blank" class="pt-0">
-      <p><i class="mb-1 fa-brands fa-github button-hover"></i></p>
-    </a>
+      <div class="col col-lg-2 col-sm-6">
+
+        <p>Front-End Repo <a href="https://github.com/NovaDA/Ghost_Hunters_FE" class="pt-0" target="_blank">
+            <i class="mb-1 fa-brands fa-github button-hover"></i> </a></p>
+      </div>
+
+      <div class="col col-lg-2 col-sm-6">
+        <p>Back-End Repo <a href="https://github.com/NovaDA/Ghost_Hunters_BE" class="pt-0" target="_blank">
+            <i class="mb-1 fa-brands fa-github button-hover"></i> </a></p>
+      </div>
+
+    </div>
 
   </div>
 
 </body>
+
 </html>
