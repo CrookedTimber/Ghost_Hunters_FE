@@ -49,7 +49,7 @@
 
             };
 
-            fetch('http://localhost:5000/posts/Add', options)
+            fetch('https://paranormal-testimonies.herokuapp.com/posts/Add', options)
                 .then(r => r.json())
                 .catch(console.warn)
                 .then(closeNewPostBtn.click());
@@ -117,7 +117,7 @@
 
         };
 
-        fetch('http://localhost:5000/posts/Comment', options)
+        fetch('https://paranormal-testimonies.herokuapp.com/posts/Comment', options)
             .then(r => r.json())
             .catch(console.warn)
 
@@ -259,7 +259,7 @@
 
         };
 
-        fetch('http://localhost:5000/posts/emojiReaction', options)
+        fetch('https://paranormal-testimonies.herokuapp.com/posts/emojiReaction', options)
             .then(r => r.json())
             .catch(console.warn)
 
